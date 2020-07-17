@@ -5,15 +5,9 @@ const Movie = require('./connect');
 const path = require('path'); //---heroku---
 const apikey = '16c7f353';
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 
-//--- heroku ---
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
+
 
 //localhost:5000/getmovie?title=MovieTitle
 app.get('/getmovie', (req, res) => {
