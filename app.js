@@ -5,7 +5,7 @@ const Movie = require('./connect');
 const path = require('path'); //---heroku---
 const apikey = '16c7f353';
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 
 
